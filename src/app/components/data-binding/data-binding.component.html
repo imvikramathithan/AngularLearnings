@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      1.interpolation
+      <p>{{ firstName }}</p>
+    </div>
+    <div class="col-6">
+      2.Property binding <br />
+      <input type="text" [value]="firstName" name="" id="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <button class="btn btn-success" (click)="showWelcomeMes()">
+        welcome Message
+      </button>
+    </div>
+    <div class="col-3">
+      <select (change)="onCityChanges()">
+        <option value="tamilNadu">TamilNadu</option>
+        <option value="kerala">Kerala</option>
+        <option value="Karnataka">karnataka</option>
+        <option value="goa">goa</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <input type="text" [(ngModel)]="firstName">
+    </div>
+     <div class="col-3">
+      <select [(ngModel)]="selectedCity">
+        <option value="tamilNadu">TamilNadu</option>
+        <option value="kerala">Kerala</option>
+        <option value="Karnataka">karnataka</option>
+        <option value="goa">goa</option>
+      </select>
+      {{selectedCity}}
+    </div>
+  </div>
+</div>
